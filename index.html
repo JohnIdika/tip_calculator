@@ -15,25 +15,25 @@
                 <div class="border m-5 p-2">
                     <div class="form-group mb-4">
                         <label>Please Enter Total Amount</label>
-                        <input type="text" placeholder="0.00" class="form-control">
-                        <span class="text-danger">*</span>
+                        <input type="text" id="total" placeholder="0.00" class="form-control">
+                        <span class="text-danger" id="errorMsg"></span>
                     </div>
                     <div class="form-group mb-4">
                         <label>Please Rate Service</label>
-                        <select class="form-control">
-                            <option>Excellent</option>
-                            <option>Very Good</option>
-                            <option>Good</option>
-                            <option>Fair</option>
-                            <option>Poor</option>
+                        <select class="form-control" id="rate">
+                            <option value="10">Excellent</option>
+                            <option value="8">Very Good</option>
+                            <option value="6">Good</option>
+                            <option value="4">Fair</option>
+                            <option value="2">Poor</option>
                         </select>
                     </div>
                     <div class="form-group mb-4">
                         <label>Tip Amount</label>
-                        <input type="text" placeholder="0.00" class="form-control" disabled>
+                        <input type="text" placeholder="0.00" id="tip" class="form-control" disabled>
                     </div>
                     <div class="form-group mb-4 d-grid">
-                        <button class="btn btn-success">Calculate Tip</button>
+                        <button class="btn btn-success" onclick="calculateTip()">Calculate Tip</button>
                     </div>
                 </div>
             </div>
